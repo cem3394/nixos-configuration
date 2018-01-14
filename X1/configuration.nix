@@ -30,7 +30,7 @@
   };
 
   networking = {
-    hostName = "minazo";
+    hostName = "ovonel";
     networkmanager.enable = true;
   };
 
@@ -43,7 +43,7 @@
 
   # Set your time zone.
   # Home: "Europe/Amsterdam";
-  time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "America/Los_Angeles";
   # Virginia
   # time.timeZone = "America/New_York";
 
@@ -114,7 +114,7 @@
         xbindkeys
         xclip
         xsel
-        zip
+        zip 
       ];
       crypt-packages = [
         git-crypt
@@ -127,11 +127,43 @@
         autoconf
         automake
         clang-tools
-        gcc
-        gitFull
+        
+        htop
+        tmux
+        tree
+        colordiff
+        silver-searcher
+        vim_configurable
+        gitAndTools.gitFull
+        mercurialFull
+        python
+        kde4.kdiff3
+        vimPlugins.YouCompleteMe
+        vimPlugins.gitgutter
+
+        # Haskell development in vim
+        vimPlugins.vimproc-vim
+        vimPlugins.vim-hdevtools
+        vimPlugins.ghc-mod-vim
+
+        # needed for vim-hdevtools
+        haskellPackages.ghc
+        /*haskellPackages.ghc-mod*/
+        haskellPackages.cabal-install
+        haskellPackages.cabal2nix
+        haskellPackages.hdevtools
+        haskellPackages.yesod-bin
+
+        # needed for compiling vimproc's shared library
+        gnutar
         gnumake
-        ninja-kitware
-        watson-ruby
+        gzip
+        gcc
+        binutils
+        coreutils
+        gawk
+        gnused
+        gnugrep 
       ];
       nix-packages = [
         nix-home
