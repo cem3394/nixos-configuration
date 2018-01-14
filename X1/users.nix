@@ -2,8 +2,8 @@
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.roberto = {
-    description = "Roberto Di Remigio";
+  users.extraUsers.chris = {
+    description = "chris";
     extraGroups = [
       "adm"
       "audio"
@@ -17,7 +17,7 @@
       "video"
       "wheel"
     ];
-    home = "/home/roberto";
+    home = "/home/cem";
     createHome = true;
     isNormalUser = true;
     uid = 1000;
